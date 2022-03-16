@@ -1,0 +1,97 @@
+.app__navbar{
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-black);
+}
+.app__navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.app__navbar-logo img{
+    width: 150px;
+}
+.app__navbar-links{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    text-decoration: none;
+    list-style: none;
+}
+.app__navbar-links li{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.app__navbar-links li:hover{
+    color: var(--color-grey);
+}
+.app__navbar-login{
+    display: flex;
+    justify-content: end;
+}
+.app__navbar-login a{
+    margin: 0 1rem;
+}
+.app__navbar-login a:hover{
+    color: var(--color-grey);
+}
+.app__navbar-login div{
+    width: 1px;
+    background-color: white;
+}
+.app__navbar-smallscreen{
+    display: none;
+    align-items: center;
+}
+.app__navbar-smallscreen_overlay{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    transition: .5s ease;
+    z-index: 5;
+}
+.app__navbar-smallscreen_overlay li{
+   margin: 1rem 0;
+   list-style: none;
+    color: var(--color-golden);
+   font-family: var(--font-base);
+}
+.overlay__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem
+}
+@media screen and (min-width : 2000px){
+    .app__navbar-logo{
+        width: 150px;
+    }
+}
+@media screen and (max-width : 1150px){
+    .app__navbar-links{
+        display: none;
+    }
+    .app__navbar-smallscreen{
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+}
+@media screen and (max-width : 650px){
+    .app__navbar-login{
+        display: none;
+    }
+    .app__navbar-logo{
+        width: 110px;
+    }
+}
