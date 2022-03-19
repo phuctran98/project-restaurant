@@ -1,0 +1,21 @@
+.app__menuItem{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 100%;
+}
+.app__menuItem-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.app__menuItem-name{
+   flex: 1;
+}
+.app__menuitem-dash{
+    width: 90px;
+    height: 1px;
+    margin: 0 2rem;
+    background-color: var(--color-golden);
+}
